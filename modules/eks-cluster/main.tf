@@ -110,5 +110,5 @@ resource "aws_ec2_tag" "public_subnet_tag" {
   for_each    = toset(local.public_subnets)
   resource_id = each.value
   key         = "kubernetes.io/role/elb"
-  value       = "1"
+  value = 1
 }
